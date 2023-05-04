@@ -24,9 +24,11 @@ struct MapView: View {
     var body: some View {
         
         VStack{
-            Image(String(number)) .resizable()
+            Image(String(number))
+                .resizable()
                 .scaledToFit()
                 .aspectRatio(contentMode: .fit)
+                .pinchToZoom()
         }
         .navigationBarTitle(navText)
         .navigationBarTitleDisplayMode(.inline)
