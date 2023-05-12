@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04342B1C2A0DC5C6005583C1 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04342B1B2A0DC5C6005583C1 /* FavouritesView.swift */; };
+		04342B1E2A0DCB57005583C1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04342B1D2A0DCB57005583C1 /* MainView.swift */; };
+		04342B202A0DD1F6005583C1 /* ClassroomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04342B1F2A0DD1F6005583C1 /* ClassroomsView.swift */; };
+		04342B222A0DDCC2005583C1 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04342B212A0DDCC2005583C1 /* Favourites.swift */; };
+		04342B242A0DE351005583C1 /* TappableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04342B232A0DE351005583C1 /* TappableButton.swift */; };
 		047574C62A03105700CD606F /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047574C52A03105700CD606F /* TutorialView.swift */; };
 		047574CA2A0341C800CD606F /* Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047574C92A0341C800CD606F /* Zoom.swift */; };
 		04BF9BCD2A006F1600D66781 /* MountDoug_MapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF9BCC2A006F1600D66781 /* MountDoug_MapsApp.swift */; };
-		04BF9BCF2A006F1600D66781 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF9BCE2A006F1600D66781 /* ContentView.swift */; };
 		04BF9BD12A006F1700D66781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BF9BD02A006F1700D66781 /* Assets.xcassets */; };
 		04BF9BD42A006F1700D66781 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BF9BD32A006F1700D66781 /* Preview Assets.xcassets */; };
 		04BF9BDB2A00C64000D66781 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF9BDA2A00C64000D66781 /* MapView.swift */; };
@@ -18,11 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04342B1B2A0DC5C6005583C1 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		04342B1D2A0DCB57005583C1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		04342B1F2A0DD1F6005583C1 /* ClassroomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomsView.swift; sourceTree = "<group>"; };
+		04342B212A0DDCC2005583C1 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
+		04342B232A0DE351005583C1 /* TappableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableButton.swift; sourceTree = "<group>"; };
 		047574C52A03105700CD606F /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		047574C92A0341C800CD606F /* Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom.swift; sourceTree = "<group>"; };
 		04BF9BC92A006F1600D66781 /* MountDoug Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MountDoug Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BF9BCC2A006F1600D66781 /* MountDoug_MapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountDoug_MapsApp.swift; sourceTree = "<group>"; };
-		04BF9BCE2A006F1600D66781 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04BF9BD02A006F1700D66781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BF9BD32A006F1700D66781 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04BF9BDA2A00C64000D66781 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -43,7 +51,9 @@
 		047574CB2A03443300CD606F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04BF9BCE2A006F1600D66781 /* ContentView.swift */,
+				04342B1D2A0DCB57005583C1 /* MainView.swift */,
+				04342B1F2A0DD1F6005583C1 /* ClassroomsView.swift */,
+				04342B1B2A0DC5C6005583C1 /* FavouritesView.swift */,
 				04DAFCFB2A038CA4003DDF78 /* InfoView.swift */,
 				047574C52A03105700CD606F /* TutorialView.swift */,
 				04BF9BDA2A00C64000D66781 /* MapView.swift */,
@@ -54,6 +64,7 @@
 		04BF9BC02A006F1600D66781 = {
 			isa = PBXGroup;
 			children = (
+				04342B232A0DE351005583C1 /* TappableButton.swift */,
 				04BF9BCB2A006F1600D66781 /* MountDoug Maps */,
 				04BF9BCA2A006F1600D66781 /* Products */,
 			);
@@ -72,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				04BF9BCC2A006F1600D66781 /* MountDoug_MapsApp.swift */,
+				04342B212A0DDCC2005583C1 /* Favourites.swift */,
 				047574C92A0341C800CD606F /* Zoom.swift */,
 				047574CB2A03443300CD606F /* Views */,
 				04BF9BD02A006F1700D66781 /* Assets.xcassets */,
@@ -159,10 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				047574C62A03105700CD606F /* TutorialView.swift in Sources */,
+				04342B202A0DD1F6005583C1 /* ClassroomsView.swift in Sources */,
+				04342B1E2A0DCB57005583C1 /* MainView.swift in Sources */,
 				047574CA2A0341C800CD606F /* Zoom.swift in Sources */,
-				04BF9BCF2A006F1600D66781 /* ContentView.swift in Sources */,
 				04BF9BDB2A00C64000D66781 /* MapView.swift in Sources */,
 				04DAFCFC2A038CA4003DDF78 /* InfoView.swift in Sources */,
+				04342B1C2A0DC5C6005583C1 /* FavouritesView.swift in Sources */,
+				04342B222A0DDCC2005583C1 /* Favourites.swift in Sources */,
+				04342B242A0DE351005583C1 /* TappableButton.swift in Sources */,
 				04BF9BCD2A006F1600D66781 /* MountDoug_MapsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

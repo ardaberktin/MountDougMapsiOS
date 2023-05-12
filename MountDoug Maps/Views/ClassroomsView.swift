@@ -7,28 +7,26 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ClassroomsView: View {
     @State var visibleItem: Set<Int> = Set()
-    @State var an: Bool = false
+   // @State var an: Bool = false
 
     var body: some View {
         NavigationStack {
             //ScrollViewReader { proxy in
             VStack{
                 
-//               if visibleItem.contains(1){
-                    Text("Please click on the room you would like to find.")
-                        .padding(.leading, 21)
-                        .padding(.top, 10)
-                        .frame(maxWidth: .infinity,maxHeight:30, alignment: .leading)
-                        .foregroundColor(.white)
-//                }
-
-
-                
-    
                 ScrollViewReader { proxy in
-                    VStack{
+                        
+                   // if visibleItem.contains(1){
+                        Text("Please click on the room you would like to find.")
+                            .padding(.leading, 21)
+                            .padding(.top, 10)
+                            .frame(maxWidth: .infinity,maxHeight:30, alignment: .leading)
+                            .foregroundColor(.white)
+                            .backgroundStyle(.black)
+                  //}
+                        
                         ZStack (alignment: .bottomTrailing)
                         {
                             //ScrollView{
@@ -94,6 +92,8 @@ struct ContentView: View {
 //                                .foregroundColor(.white)
                              //}
                             
+                          
+                            
                             if visibleItem.contains(1){
                                 
                                 Button {
@@ -144,11 +144,10 @@ struct ContentView: View {
                         .navigationDestination(for: Int.self) { num in
                             MapView(number: num)
                         }
-                        
-                    }//VStack
 
                 }//ScrollViewReader
                 //Spacer() //adds a bottom notch to the list
+                    
                 
             }//VStack
             .navigationTitle("MountDoug Maps")
@@ -186,24 +185,15 @@ struct ContentView: View {
         .padding(0)
     }//body
     
-//    func classButton(_index: Int){
-//
-//        NavigationLink("Room: \(index)", value: index)
-//            .padding(6)
-//            .id(index)
-//            .onAppear(){
-//                visibleItem.insert(index)
-//            }.onDisappear(){
-//                visibleItem.remove(index)
-//            }
-//    }
-    
 }//struct view
         
     
-struct ContentView_Previews: PreviewProvider {
+struct ClassroomsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ClassroomsView()
+            .environmentObject(Favourites())
     }
 }// struct preview
+
+
 

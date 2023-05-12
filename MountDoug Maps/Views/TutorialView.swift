@@ -15,11 +15,10 @@ struct TutorialView: View {
         VStack (spacing: 30){
             
             ZStack (alignment: .topTrailing){
-                Text("First floor:\nThe arrow starts from the main doors")
+                Text("First floor:\nThe arrow starts from the main entrance")
                     .frame(width: 350, height: 50)
                     .fontWeight(.bold)
                     .font(.body)
-                    .foregroundColor(.black)
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -31,29 +30,29 @@ struct TutorialView: View {
                     showingPopover1 = true
                 } label:{
                     Image(systemName: "questionmark.circle.fill")
-                        .foregroundColor(.black)
-                        .background(.white)
                         .padding(.trailing, 10)
                         .padding(.top, 50)
+                        .pinchToZoom()
                        
                 }.popover(isPresented: $showingPopover1) {
                     Text("First Floor")
                         .font(.headline)
-                        .padding(.top, 50)
+                        .padding(.top, 30)
                         .padding(.bottom, 50)
                     
                     Text("Main Doors:")
                         .frame(maxWidth: .infinity,maxHeight:30, alignment: .leading)
                         .padding(.leading, 20)
                     
-                    //Image("MainDoors")
-//                        .resizable()
-//                        .scaledToFit()
+                    Image("MainEntrance")
+                        .resizable()
+                        .scaledToFit()
+                        .pinchToZoom()
                     
                     Spacer()
-                }
+                }//button
 
-            }//
+            }//ZStack 1st
             
             
             ZStack (alignment: .topTrailing){
@@ -61,7 +60,6 @@ struct TutorialView: View {
                     .frame(width: 350, height: 70)
                     .fontWeight(.bold)
                     .font(.body)
-                    .foregroundColor(.black)
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -72,16 +70,26 @@ struct TutorialView: View {
                     showingPopover2 = true
                 } label:{
                     Image(systemName: "questionmark.circle.fill")
-                        .foregroundColor(.black)
-                        .background(.white)
                         .padding(.trailing, 10)
                         .padding(.top, 10)
                        
                 }.popover(isPresented: $showingPopover2) {
+                        
                     Text("Second Floor")
                         .font(.headline)
-                        .padding(.top, 50)
-                        .padding(.bottom, 50)
+                        .padding(.top, 20)
+                        .padding(.bottom, 10)
+                    
+                    
+                        Image("MiddleStairs1")
+                            .resizable()
+                            .scaledToFit()
+                            .pinchToZoom()
+                        
+                        Image("MiddleStairs2")
+                            .resizable()
+                            .scaledToFit()
+                            .pinchToZoom()
                     
                     Spacer()
                 }
