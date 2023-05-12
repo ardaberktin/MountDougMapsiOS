@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MapView: View {
     let number: Int
+   // @EnvironmentObject var favs: Favourites
+    
+    
     
     var navText: String {
             if number == 1 {
@@ -22,28 +25,32 @@ struct MapView: View {
     
 
     var body: some View {
-        
-        VStack{
-            Image(String(number))
-                .resizable()
-                .scaledToFit()
-                .aspectRatio(contentMode: .fit)
-                .pinchToZoom()
-        }
-        .navigationBarTitle(navText)
-        .navigationBarTitleDisplayMode(.inline)
-        .foregroundColor(.white)
-        .background(.black)
-    .toolbarColorScheme(.dark, for: .navigationBar)
-    .toolbarBackground(.purple,for: .navigationBar)
-    .toolbarBackground(.visible, for: .navigationBar)
-        
+            
+            VStack(alignment: .trailing){
+                Image(String(number))
+                    .resizable()
+                    .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
+                    .pinchToZoom()
+                
+                TappableButton(number: number).padding()
+                
+            }
+            .navigationBarTitle(navText)
+            .navigationBarTitleDisplayMode(.inline)
+            //.foregroundColor(.white)
+            //.background(.black)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarBackground(.purple,for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+
     }
-    
+        
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(number: 106)
+            .environmentObject(Favourites())
     }
 }

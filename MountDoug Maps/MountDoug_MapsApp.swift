@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MountDoug_MapsApp: App {
+    @StateObject var favs = Favourites()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(favs)
         }
     }
 }
