@@ -15,7 +15,7 @@ struct FavouritesView: View {
            ZStack (alignment: .top){
                     List{
                         Section(""){
-                            ForEach(favs.rooms, id: \.self) { room in
+                            ForEach($favs.rooms, id: \.self, editActions: .move) { $room in
                                 HStack {
                                     NavigationLink {
                                         MapView(number: room)
