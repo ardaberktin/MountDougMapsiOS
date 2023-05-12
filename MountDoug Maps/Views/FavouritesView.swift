@@ -37,7 +37,7 @@ struct FavouritesView: View {
                     .toolbarBackground(.visible, for: .navigationBar)
                     .toolbar{
                         EditButton()
-                            //.disabled(favs.rooms.isEmpty)
+                           .disabled(favs.rooms.isEmpty)
                         
                     }
                     
@@ -49,6 +49,7 @@ struct FavouritesView: View {
             //.padding()
             
         }//Navigation Stack
+        
 
     }//Body
     
