@@ -64,6 +64,7 @@
 		04BF9BC02A006F1600D66781 = {
 			isa = PBXGroup;
 			children = (
+				04342B232A0DE351005583C1 /* TappableButton.swift */,
 				04BF9BCB2A006F1600D66781 /* MountDoug Maps */,
 				04BF9BCA2A006F1600D66781 /* Products */,
 			);
