@@ -5,7 +5,6 @@
 //  Created by Arda Berktin on 2023-05-11.
 //
 
-//Bug: Edit button stays on edit mode if you delete all the fav rooms at once until you add a new one and tap done. Also delete select the last selected and appears without being in edit mode.
 import SwiftUI
 
 struct FavouritesView: View {
