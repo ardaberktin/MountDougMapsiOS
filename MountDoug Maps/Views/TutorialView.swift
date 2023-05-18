@@ -10,13 +10,14 @@ import SwiftUI
 struct TutorialView: View {
     @State private var showingPopover1 = false
     @State private var showingPopover2 = false
+    @State private var showingPopover3 = false
     
     var body: some View {
         VStack (spacing: 30){
             
             ZStack (alignment: .topTrailing){
                 Text("First floor:\nThe arrow starts from the main entrance")
-                    .frame(width: 350, height: 50)
+                    .frame(width: 350, height: 70, alignment: .leading)
                     .fontWeight(.bold)
                     .font(.body)
                     .padding()
@@ -57,7 +58,7 @@ struct TutorialView: View {
             
             ZStack (alignment: .topTrailing){
                 Text("Second floor:\nThe arrow stars from the stairs next to the breezeway")
-                    .frame(width: 350, height: 70)
+                    .frame(width: 350, height: 70, alignment: .leading)
                     .fontWeight(.bold)
                     .font(.body)
                     .padding()
@@ -94,6 +95,43 @@ struct TutorialView: View {
                     Spacer()
                 }
             }//ZStack 2nd
+            
+            ZStack (alignment: .topTrailing){
+                Text("Favourites:\nClick on the heart button in any room to add it to your favourites")
+                    .frame(width: 350, height: 70, alignment: .leading)
+                    .fontWeight(.bold)
+                    .font(.body)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.gray, lineWidth: 3)
+                    )//overlay
+                
+                Button {
+                    showingPopover3 = true
+                } label:{
+                    Image(systemName: "questionmark.circle.fill")
+                        .padding(.trailing, 10)
+                        .padding(.top, 10)
+                       
+                }.popover(isPresented: $showingPopover3) {
+                        
+                    Text("Add to Favourites")
+                        .font(.headline)
+                        .padding(.top, 20)
+                        .padding(.bottom, 10)
+                    
+                    
+                        Image("FavouritesButton")
+                            .resizable()
+                            .scaledToFit()
+                            .border(.black)
+                            .pinchToZoom()
+                        
+                    
+                    Spacer()
+                }
+            }//ZStack 3rd
     
             Spacer()
            

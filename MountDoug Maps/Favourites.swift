@@ -14,6 +14,8 @@ class Favourites: ObservableObject{
             loadRooms()
         }
     
+
+    
     var total: Int{
         return rooms.count
     }
@@ -24,7 +26,6 @@ class Favourites: ObservableObject{
             rooms.append(item)
             saveRooms()
         }
-        
         
     }
     

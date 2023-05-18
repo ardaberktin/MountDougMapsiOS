@@ -9,9 +9,6 @@ import SwiftUI
 
 struct MapView: View {
     let number: Int
-   // @EnvironmentObject var favs: Favourites
-    
-    
     
     var navText: String {
             if number == 1 {

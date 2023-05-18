@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ClassroomsView: View {
     @State var visibleItem: Set<Int> = Set()
-   // @State var an: Bool = false
 
     var body: some View {
         NavigationStack {
@@ -189,11 +188,11 @@ struct ClassroomsView: View {
         
     
 struct ClassroomsView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ClassroomsView()
             .environmentObject(Favourites())
     }
-}// struct preview
-
+}
 
 
