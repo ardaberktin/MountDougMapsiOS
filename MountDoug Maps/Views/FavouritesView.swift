@@ -46,7 +46,7 @@ struct FavouritesView: View {
                         trailing: editButton()
                     )
                     .environment(\.editMode, .constant(self.isEditing ? EditMode.active: EditMode.inactive))
-                    .animation(Animation.spring(), value: isEditing)
+                    //.animation(Animation.spring(), value: isEditing) //doesn't work
                     .id(UUID())
                     
                     
@@ -105,7 +105,10 @@ struct FavouritesView: View {
             EmptyView()
         } else {
             Button {
-                isEditing.toggle()
+                withAnimation {
+                    isEditing.toggle()
+                }
+             
                 selectedRooms.removeAll()
             } label: {
                 if self.isEditing{

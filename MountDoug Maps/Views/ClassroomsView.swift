@@ -9,6 +9,13 @@ import SwiftUI
 
 struct ClassroomsView: View {
     @State var visibleItem: Set<Int> = Set()
+    var isTextOn: Bool {
+        if visibleItem.contains(1){
+            return true
+        }else{
+            return false
+        }
+    }
 
     var body: some View {
         NavigationStack {
@@ -17,14 +24,16 @@ struct ClassroomsView: View {
                 
                 ScrollViewReader { proxy in
                         
-                   // if visibleItem.contains(1){
+                   // if  isTextOn {
                         Text("Please click on the room you would like to find.")
                             .padding(.leading, 21)
                             .padding(.top, 10)
                             .frame(maxWidth: .infinity,maxHeight:30, alignment: .leading)
                             .foregroundColor(.white)
-                            .backgroundStyle(.black)
-                  //}
+                            .backgroundStyle(.purple) //doesn't work
+                            //.opacity(isTextOn ? 0 : 1)
+                    //}
+   
                         
                         ZStack (alignment: .bottomTrailing)
                         {
